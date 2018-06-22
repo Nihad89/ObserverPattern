@@ -13,10 +13,13 @@ public class Students extends Observer{
 public Students(ClassRepresentative CR,int Id)
 {
     this.CR=CR;
-    this.CR.subscribe(this);
+    
     this.Id=Id;
 }
-public void Remove()
+public void subscribe(){
+this.CR.subscribe(this);
+}
+public void unsubscribe()
 {
 this.CR.unsubscribe(this);
 }

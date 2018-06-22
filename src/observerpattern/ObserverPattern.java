@@ -19,6 +19,10 @@ public class ObserverPattern {
    Students s1=new Students(CR,1);
    Students s2=new Students(CR,2);
    Students s3=new Students(CR,3);
+   s1.subscribe();
+   s2.subscribe();
+   s3.subscribe();
+   s3.unsubscribe();
    CR.notifyAllObservers("I am your new CR");
 // TODO code application logic here
     }
