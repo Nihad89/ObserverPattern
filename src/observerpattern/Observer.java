@@ -10,6 +10,7 @@ package observerpattern;
  * @author lenovo pc
  */
 public abstract class Observer {
-public ClassRepresentative CR;
+protected ClassRepresentative CR;
+protected int Id;
 public abstract void update(String msg);
 }

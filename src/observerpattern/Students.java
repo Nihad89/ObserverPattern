@@ -10,10 +10,11 @@ package observerpattern;
  * @author lenovo pc
  */
 public class Students extends Observer{
-public Students(ClassRepresentative CR)
+public Students(ClassRepresentative CR,int Id)
 {
     this.CR=CR;
     this.CR.subscribe(this);
+    this.Id=Id;
 }
 public void Remove()
 {
@@ -26,6 +27,6 @@ this.CR.unsubscribe(this);
     @Override
      public void update(String msg) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    System.out.println("An email from CR : "+msg);
+    System.out.println("An email from CR to Id No " +Id+":"+msg);
     }
 }
